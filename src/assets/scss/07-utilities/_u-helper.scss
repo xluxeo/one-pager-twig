@@ -1,4 +1,4 @@
-@use "../01-Tokens" as TOKENS;
+@use "../01-tokens" as TOKENS;
 
 $margin-directions: (top, right, bottom, left) !default;
 $margin-spacings: TOKENS.$GLOBAL-SPACING-TOKENS !default;
