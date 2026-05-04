@@ -12,7 +12,6 @@ export default {
           },
           outDir: './dist'
         },
-        root: 'src',
         css: {
           devSourcemap: true,
           cssPreprocessOptions: {
