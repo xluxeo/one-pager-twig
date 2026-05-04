@@ -1,5 +1,5 @@
 {
-  "logo": "/src/assets/images/logo.svg",
-  "logoDark": "/src/assets/images/logo-dark.svg",
-  "logoLight": "/src/assets/images/logo-yellow.svg"
+  "logo": "/images/logo.svg",
+  "logoDark": "/images/logo-dark.svg",
+  "logoLight": "/images/logo-yellow.svg"
 }
