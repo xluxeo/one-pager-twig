@@ -1,35 +1,35 @@
 {
   "cards": [
     {
-      "image": "src/assets/images/couple-helicopter.jpg",
+      "image": "/images/couple-helicopter.jpg",
       "caption1": "46°33’N <br> 11°42’N",
       "caption2": "Dolomiti, <br> Italy",
       "text": "Intimate helicopter elopement in the Italian Dolomites"
     },
     {
-      "image": "src/assets/images/couple-waterfall.jpg",
+      "image": "/images/couple-waterfall.jpg",
       "caption1": "46°33’N <br> 11°42’N",
       "caption2": "Dolomiti, <br> Italy",
       "text": "Intimate helicopter elopement in the Italian Dolomites"
     },
     {
-      "image": "src/assets/images/couple-rocky-coast.jpg",
+      "image": "/images/couple-rocky-coast.jpg",
       "caption1": "46°33’N <br> 11°42’N",
       "caption2": "Dolomiti, <br> Italy",
       "text": "Intimate helicopter elopement in the Italian Dolomites"
     },
     {
-      "image": "src/assets/images/couple-factory-building.jpg",
+      "image": "/images/couple-factory-building.jpg",
       "caption1": "50°55′N  <br> 1°42′E",
       "text": "Why an engagement shoot is always a good idea"
     },
     {
-      "image": "src/assets/images/couple-snow.jpg",
+      "image": "/images/couple-snow.jpg",
       "caption1": "46°49'N <br> 9°17'E",
       "text": "10 epic & adventurous places to elope in Europe"
     },
     {
-      "image": "src/assets/images/wedding-beach.jpg",
+      "image": "/images/wedding-beach.jpg",
       "caption1": "38°41'N <br> 7°40'W",
       "text": "6 reasons to have a destination wedding"
     }
