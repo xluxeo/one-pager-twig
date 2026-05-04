@@ -2,25 +2,9 @@ import vituum from 'vituum'
 import twig from '@vituum/vite-plugin-twig'
 
 export default {
-  //base: 'your domain',
+
   plugins: [
     vituum({
-      vite: {
-        build: {
-          rollupOptions: {
-            input: './src/pages/**/*.{twig,json,html}',
-          },
-          outDir: './dist'
-        },
-        css: {
-          devSourcemap: true,
-          cssPreprocessOptions: {
-            scss: {
-              includePaths: ['node_modules/']
-            }
-          }
-        },
-      },
       templates: {
         format: 'twig'
       }
@@ -32,5 +16,19 @@ export default {
         pages: 'src/pages'
       },
     })
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      input: ['./src/pages/**/*.{twig,json,html}'],
+    },
+    outDir: 'dist'
+  },
+  css: {
+    devSourcemap: true,
+    preprocessorOptions: { 
+      scss: {
+        includePaths: ['node_modules/']
+      }
+    }
+  }
 }
