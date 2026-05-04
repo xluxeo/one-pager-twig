@@ -1,0 +1,54 @@
+@use "../01-tokens" as TOKENS;
+
+$section-spacing-sm: TOKENS.$GLOBAL-SPACING-SM !default;
+$section-spacing-xxl: TOKENS.$GLOBAL-SPACING-XXL !default;
+$section-spacing-3xl: TOKENS.$GLOBAL-SPACING-3XL !default;
+$section-z-index: TOKENS.$GLOBAL-BASE-LAYER !default;
+$section-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$section-color-secondary: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+$section-block-size: 65px !default;
+
+.c-section {
+	position: relative;
+	padding-block: $section-spacing-xxl;
+}
+
+[data-section-background-color="primary"] {
+	background-color: $section-color-primary;
+}
+
+[data-section-background-color="secondary"] {
+	background-color: $section-color-secondary;
+}
+
+[data-section-divider="primary"] {
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		inline-size: 100%;
+		background: url("/src/assets/images/mountain-line.svg") repeat-x top center;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset-block-end: -60px;
+		z-index: $section-z-index;
+		inline-size: 100%;
+		block-size: $section-block-size;
+		background-image: url("/src/assets/images/steps-mountain.svg");
+	}
+}
+
+[ data-section-spacing="none"] {
+	padding: 0;
+}
+
+[data-section-spacing-end="large"] {
+	padding-block-end: $section-spacing-3xl;
+}
+
+[data-section-spacing="small"] {
+	padding-block: $section-spacing-sm;
+}

@@ -1,0 +1,107 @@
+{% extends '@layout/main.twig' %}
+{% set page = 'start' %}
+
+{% block title %}Startseite{% endblock %}
+
+{% block svg %}
+    <div class="u-hidden">
+        <svg id="mountain" viewBox="0 0 3000 137" fill="000000" xmlns="http://www.w3.org/2000/svg">
+            <path id="mountain-path"
+                  d="M537 106.498C621.833 114.498 793.9 130.698 803.5 131.498C815.5 132.498 819 125.498 831.5 124.498C844 123.498 877 138.498 892 131.498C907 124.498 948.5 97.4984 965.5 94.4984C982.5 91.4984 996 85.4984 1004 79.4984C1012 73.4984 1021 67.4984 1036 65.4984C1051 63.4984 1067.5 53.9984 1075.5 44.9984C1083.5 35.9984 1106.5 20.9984 1124.5 17.9984C1142.5 14.9984 1150 6.9984 1161 6.9984C1172 6.9984 1191 -6.5016 1206.5 3.9984C1222 14.4984 1266 34.9983 1285 41.4983C1304 47.9983 1326 66.4983 1336.5 68.9983C1347 71.4983 1384 74.9985 1399.5 79.4984C1415 83.9983 1456.5 93.4983 1476 98.9983C1495.5 104.498 1519 107.498 1535.5 111.998C1552 116.498 1661 131.998 1681 132.498C1701 132.998 1711 127.998 1719.5 128.498C1728 128.998 1763 132.498 1774 132.498C1785 132.498 1808.5 126.998 1830 132.498C1838.98 134.796 1859.39 135.959 1881.1 136.498H1952C1986.5 135.165 2057.7 132.498 2066.5 132.498C2077.5 132.498 2106 118.681 2122.5 123.59C2139 128.498 2185 128.498 2192.5 132.498C2200 136.498 2383 136.498 2399 132.498C2415 128.498 2442 128.59 2459.5 123.59C2477 118.59 2566.5 94.4984 2583.5 94.4984C2600.5 94.4984 2611.5 103.498 2643.5 98.9983C2675.5 94.4984 2705 72.4982 2724.5 68.9983C2744 65.4984 2752.5 89.9985 2759 94.4984C2764.2 98.0983 2788.17 118.665 2799.5 128.498C2808 125.165 2829.7 114.598 2848.5 98.9983C2872 79.4984 2896 89.9985 2923.5 79.4984C2945.5 71.0983 2985 52.9984 3000 44.9984V136.498H1952C1944.14 136.789 1911.36 137.25 1881.1 136.498H537H0V45C4.66667 41.6971 27.884 30.6752 36.5 32.5898C45.5 34.5898 63.5 60.0897 78.5 67.5898C93.5 75.09 107 102.498 115.5 98.9983C124 95.4983 133.455 96.9746 143 89.0898C154.5 79.5898 167 94.4984 177 89.0898C187 83.6813 196.5 79.4984 229.5 65.4984C243.5 51.4984 256.5 65.4984 262 65.4984C267.5 65.4984 286.5 65.4984 292 72.5898C297.5 79.6813 305.5 94.4984 317 98.9983C328.5 103.498 351.5 98.9983 368.5 106.498C385.5 113.999 402 94.4984 414.5 98.9983C427 103.498 468 106.498 480.5 98.9983C490.5 92.9982 522.333 101.498 537 106.498Z"/>
+        </svg>
+    </div>
+
+{% endblock %}
+
+{% block header %}
+    {% include '@components/component.header.twig' %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        {% include "@components/component.hero.twig" %}
+    </section>
+    <section class="c-section" data-section-background-color="secondary" data-section-spacing-end="large">
+        {% include "@components/component.slider.twig" %}
+    </section>
+    <section class="c-section">
+        {% include '@components/component.divider.twig' with {
+            color: 'data-divider-color-tertiary'
+        } %}
+        <div class="o-wrapper">
+            {% include "@components/component.media-block.twig" %}
+        </div>
+    </section>
+    <section class="c-section">
+        <div class="o-wrapper">
+            {% include "@components/component.media-block-grid.twig" %}
+        </div>
+    </section>
+    <section class="c-section" data-section-background-color="primary">
+        {% include '@components/component.divider.twig' %}
+        <div class="o-wrapper">
+            {% include '@components/component.card-list.twig' with {
+                cards: cards|slice(0, 3)
+            } %}
+            <div class="u-center u-margin-top-l">
+                {% include '@components/component.button.twig' with {
+                    text: "More stories",
+                    modifier: 'data-button-secondary'
+                } %}
+            </div>
+        </div>
+    </section>
+    <section class="c-section">
+        {% include '@components/component.divider.twig' with {
+            color: 'data-divider-color-tertiary'
+        } %}
+        {% include '@components/component.marquee.twig' %}
+        {% include '@components/component.credentials.twig' %}
+    </section>
+    <section class="c-section" data-section-divider="primary">
+        <div class="o-wrapper">
+            {% include '@components/component.card-list.twig' with {
+                cards: cards|slice(-3)
+            } %}
+            <div class="u-center u-margin-top-l">
+                {% include '@components/component.button.twig' with {
+                    text: "More tips & resources",
+                    modifier: 'data-button-secondary'
+                } %}
+            </div>
+        </div>
+    </section>
+    <section class="c-section" data-section-spacing="none">
+        <div class="c-cover-card">
+            <img class="c-cover-card__image" src="src/assets/images/section-background.jpg" alt="">
+            <div class="c-cover-card__headline">
+                {% include '@components/component.headline.twig' with {
+                    text: "Next steps"
+                } %}
+            </div>
+        </div>
+    </section>
+    <section class="c-section" data-section-spacing="none">
+        {% include '@components/component.list.twig' %}
+        <div class="c-cta u-center u-margin-top-xl u-margin-bottom-xl">
+            <div class="c-cta__headline">
+                {% include '@components/component.headline.twig' with {
+                    text: "Are you ready to do <br> epic stuff together?"
+                } %}
+            </div>
+            <div class="c-cta__button">
+                {% include '@components/component.button.twig' with {
+                    text: "Contact me",
+                    url: '#',
+                    modifier: 'data-button-tertiary'
+                } %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer %}
+    <section class="c-section" data-section-background-color="primary" data-section-spacing="small">
+        {% include '@components/component.footer.twig' %}
+    </section>
+{% endblock %}

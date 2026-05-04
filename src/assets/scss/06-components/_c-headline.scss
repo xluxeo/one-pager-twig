@@ -1,0 +1,11 @@
+@use '../01-tokens' as TOKENS;
+
+$headline-font-family: TOKENS.$GLOBAL-FONT-FAMILY-HEADING !default;
+
+.c-headline {
+	font-family: $headline-font-family;
+}
+
+[data-headline-align="center"] {
+	text-align: center;
+}

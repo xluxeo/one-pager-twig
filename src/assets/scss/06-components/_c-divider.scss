@@ -1,0 +1,33 @@
+@use "../01-tokens" as TOKENS;
+
+$divider-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$divider-color-tertiary: TOKENS.$GLOBAL-COLOR-TERTIARY !default;
+$divider-z-index: TOKENS.$GLOBAL-BASE-LAYER !default;
+$divider-spacing: -140px !default;
+
+
+.c-divider {
+	position: absolute;
+	inset-block-start: $divider-spacing;
+	z-index: $divider-z-index;
+	inline-size: 100%;
+	overflow: hidden;
+
+	svg {
+		display: block;
+		inline-size: 100%;
+		scale: 3;
+	}
+}
+
+[data-divider-color-primary] {
+	svg {
+		fill: $divider-color-primary;
+	}
+}
+
+[data-divider-color-tertiary] {
+	svg {
+		fill: $divider-color-tertiary;
+	}
+}

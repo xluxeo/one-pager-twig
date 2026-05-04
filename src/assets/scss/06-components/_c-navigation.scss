@@ -1,0 +1,12 @@
+@use '../01-tokens' as TOKENS;
+
+$nav-max-inline-size: 280px !default;
+
+.c-navigation__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 0;
+	max-inline-size: $nav-max-inline-size;
+	padding: 0;
+	list-style: none;
+}

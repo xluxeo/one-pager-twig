@@ -1,0 +1,63 @@
+@use '../01-tokens' as TOKENS;
+
+$card-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$card-spacing-xs: TOKENS.$GLOBAL-SPACING-XS !default;
+$card-spacing-sm: TOKENS.$GLOBAL-SPACING-SM !default;
+$card-font-size: TOKENS.$GLOBAL-FONT-SIZE-M !default;
+$card-line-height: TOKENS.$GLOBAL-LINE-HEIGHT !default;
+
+.c-card__figure {
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.c-card__image {
+	display: block;
+	inline-size: 100%;
+	transition: all 0.3s ease-in-out;
+}
+
+.c-card__figcaption {
+	position: absolute;
+	inset-block-start: $card-spacing-xs;
+	inset-inline-end: $card-spacing-xs;
+	font-size: $card-font-size;
+	color: $card-color-primary;
+	transition: all 0.3s ease-in-out;
+
+	&:nth-child(2) {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&:last-child {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.c-card__text {
+	padding-block-start: $card-spacing-sm;
+	font-size: $card-font-size;
+	line-height: $card-line-height;
+}
+
+.c-card {
+	&:hover {
+		.c-card__image {
+			scale: 1.1;
+		}
+
+		.c-card__figcaption:nth-child(2) {
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		.c-card__figcaption:last-child {
+			visibility: visible;
+			opacity: 1;
+		}
+
+	}
+}

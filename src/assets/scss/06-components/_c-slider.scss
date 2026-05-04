@@ -1,0 +1,76 @@
+@use "../01-tokens" as TOKENS;
+
+$slider-spacing: TOKENS.$GLOBAL-SPACING-SM !default;
+$slider-spacing-l: TOKENS.$GLOBAL-SPACING-XL !default;
+$slider-background-color: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+$slider-text-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$slider-number-font-size: TOKENS.$GLOBAL-FONT-SIZE-H3 !default;
+$slider-font-size: TOKENS.$GLOBAL-FONT-SIZE-M !default;
+$slider-font-size-s: TOKENS.$GLOBAL-FONT-SIZE-S !default;
+
+.c-slider {
+	color: $slider-text-color;
+}
+
+.c-slider__wrapper {
+	position: relative;
+	display: grid;
+	grid-template-columns:  60% 1fr;
+}
+
+.c-slider__slides {
+	display: flex;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+	margin: 0;
+	max-inline-size: 100%;
+	inline-size: 80%;
+	padding: 0;
+	list-style: none;
+}
+
+.c-slider__slide {
+	position: relative;
+	flex: 0 0 100%;
+	scroll-snap-align: start;
+	overflow: hidden;
+}
+
+.c-slider__number {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-end: 5px;
+	transform: translateY(-17px);
+	font-size: $slider-number-font-size;
+}
+
+.c-slider__image {
+	inline-size: 100%;
+	object-fit: cover;
+	padding-inline-end: $slider-spacing-l;
+}
+
+.c-slider__nav {
+	display: grid;
+	justify-self: end;
+}
+
+.c-slider__headline {
+	font-size: $slider-font-size;
+	letter-spacing: -1px;
+}
+
+.c-slider__text {
+	font-size: $slider-font-size-s;
+}
+
+.c-slider__button {
+	text-decoration: none;
+	color: $slider-text-color;
+}
+
+.c-slider__headline {
+	margin-block-start: 0;
+}

@@ -1,0 +1,126 @@
+@use "../01-tokens" as TOKENS;
+
+$button-color: TOKENS.$GLOBAL-COLOR-DEFAULT !default;
+$button-color-primary: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$button-spacing: TOKENS.$GLOBAL-SPACING-2XS TOKENS.$GLOBAL-SPACING-SM !default;
+$button-spacing-s: TOKENS.$GLOBAL-SPACING-2XS !default;
+$button-font-size: TOKENS.$GLOBAL-FONT-SIZE-S !default;
+
+@mixin button-hover($background-color) {
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background-color: $background-color;
+		transition: transform 0.3s ease-in-out;
+		transform: translateX(-101%);
+	}
+
+	&:hover {
+		&::after {
+			transform: translateX(0);
+		}
+	}
+}
+
+@mixin button-border-hover($color) {
+	span {
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+		padding-block: $button-spacing-s;
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset-inline-start: 0;
+			inset-block-end: 0;
+			inline-size: 100%;
+			block-size: 0.5px;
+			background-color: $color;
+		}
+	}
+
+	&:hover {
+		span::after {
+			animation-name: animation-border;
+			animation-duration: 1.2s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: 1;
+		}
+	}
+}
+
+
+.c-button {
+	position: relative;
+	display: block;
+	border: 1px solid;
+	padding: $button-spacing;
+	overflow: hidden;
+	background: none;
+	text-align: center;
+	inline-size: fit-content;
+	font-size: $button-font-size;
+	color: $button-color;
+	text-decoration: none;
+	z-index: 1;
+}
+
+[data-button-primary] {
+	border-color: $button-color-primary;
+	color: $button-color-primary;
+	@include button-hover($button-color-primary);
+
+
+	&:hover {
+		color: $button-color;
+	}
+}
+
+[data-button-secondary] {
+	border-color: $button-color;
+	color: $button-color;
+	@include button-hover($button-color);
+
+	&:hover {
+		color: $button-color-primary;
+	}
+}
+
+[data-button-tertiary] {
+	border: none;
+	padding: 0;
+	color: $button-color;
+	@include button-border-hover($button-color);
+}
+
+[data-button-quaternary] {
+	border: none;
+	padding: 0;
+	color: $button-color-primary;
+	@include button-border-hover($button-color-primary);
+}
+
+[data-button-ghost] {
+	border: none;
+	padding: 0;
+	color: $button-color-primary;
+}
+
+
+@keyframes animation-border {
+	0% {
+		inset-inline-start: 0;
+	}
+	50% {
+		inset-inline-start: 100%;
+	}
+	51% {
+		inset-inline-start: 0;
+	}
+	100% {
+		inset-inline-start: 100%;
+	}
+}

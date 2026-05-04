@@ -1,0 +1,42 @@
+{
+  "mediaBlockGrid": [
+    {
+      "headline": "46°48′N — 9°15′E",
+      "image": "src/assets/images/couple-boat.jpg",
+      "subheadline": "Laax, Switzerland",
+      "date": "January 2026"
+    },
+    {
+      "headline": "28°16′N — 16°36′W",
+      "image": "src/assets/images/couple-dune.jpg",
+      "subheadline": "Tenerife, Spain",
+      "date": "February 2026"
+    },
+    {
+      "headline": "52°22'N — 4°53'E",
+      "image": "src/assets/images/couple-underwater.jpg",
+      "subheadline": "Amsterdam, The Netherlands.",
+      "date": "March 2026"
+    },
+    {
+      "headline": "47°27'N — 12°8'E",
+      "image": "src/assets/images/couple-mountains.jpg",
+      "subheadline": "Brixental, Austria",
+      "date": "March 2026"
+    },
+    {
+      "headline": "19°25'N — 99°7'W",
+      "image": "src/assets/images/couple-hug.jpg",
+      "subheadline": "Mexico",
+      "date": "April 2026"
+    },
+    {
+      "headline": "47°22'N — 8°32'E",
+      "image": "src/assets/images/couple-sand-mountain.jpg",
+      "subheadline": "Switzerland",
+      "date": "May 2026"
+    }
+  ],
+  "mediaBlockGridHeadline": "Upcoming travels",
+  "mediaBlockGridText": "If you catch me on any upcoming journey, no travel fees apply! "
+}

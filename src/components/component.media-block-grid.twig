@@ -1,0 +1,27 @@
+{% include "@components/component.headline.twig" with {
+    "text": mediaBlockGridHeadline,
+    "direction": "center"
+} %}
+<div class="c-media-block-grid">
+    {% for item in mediaBlockGrid %}
+        <div class="c-media-block-grid__item">
+            <div class="c-media-block-grid__start">
+                <img class="c-media-block-grid__image" src="{{ item.image }}" alt="">
+            </div>
+            <div class="c-media-block-grid__end">
+                <h3 class="c-media-block-grid__headline">
+                    {{ item.headline }}
+                </h3>
+                <h4 class="c-media-block-grid__subheadline">
+                    {{ item.subheadline }}
+                </h4>
+                <p class="c-media-block-grid__date">
+                    {{ item.date }}
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+    <p class="c-media-block-grid__text">
+        {{ mediaBlockGridText }}
+    </p>
+</div>

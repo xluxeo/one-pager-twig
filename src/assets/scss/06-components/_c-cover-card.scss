@@ -1,0 +1,21 @@
+@use "../01-tokens" as TOKENS;
+
+$cover-card-color: TOKENS.$GLOBAL-COLOR-TERTIARY !default;
+$cover-card-inline-spacing: 25% !default;
+$cover-card-block-spacing: 10% !default;
+
+.c-cover-card {
+	position: relative;
+}
+
+.c-cover-card__image {
+	display: block;
+	inline-size: 100%;
+}
+
+.c-cover-card__headline {
+	position: absolute;
+	inset-block-end: $cover-card-block-spacing;
+	inset-inline-end: $cover-card-inline-spacing;
+	color: $cover-card-color;
+}

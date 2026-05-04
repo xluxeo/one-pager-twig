@@ -1,0 +1,38 @@
+@use '../01-tokens' as TOKENS;
+
+$list-font-size-text: TOKENS.$GLOBAL-FONT-SIZE-S !default;
+$list-font-size: TOKENS.$GLOBAL-FONT-SIZE-H4 !default;
+$list-spacing: TOKENS.$GLOBAL-SPACING-SM TOKENS.$GLOBAL-SPACING-MD !default;
+$list-font-weight: 300 !default;
+
+.c-list {
+	margin: 0;
+	inline-size: 100%;
+	padding: 0;
+}
+
+.c-list__item {
+	inline-size: 100%;
+	border-block-start: 1px solid black;
+
+	&:last-child {
+		border-block-end: 1px solid black;
+	}
+}
+
+.c-list__content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	inline-size: 100%;
+	padding: $list-spacing;
+}
+
+.c-list__title {
+	font-size: $list-font-size;
+}
+
+.c-list__text {
+	font-size: $list-font-size-text;
+	font-weight: $list-font-weight;
+}

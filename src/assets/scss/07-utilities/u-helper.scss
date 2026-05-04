@@ -1,0 +1,23 @@
+@use "../01-Tokens" as TOKENS;
+
+$margin-directions: (top, right, bottom, left) !default;
+$margin-spacings: TOKENS.$GLOBAL-SPACING-TOKENS !default;
+
+.u-hidden {
+	display: none;
+}
+
+.u-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@each $direction in $margin-directions {
+	@each $spacing-key, $spacing-value in $margin-spacings {
+		.u-margin-#{$direction}-#{$spacing-key} {
+			margin-#{$direction}: $spacing-value;
+		}
+	}
+}

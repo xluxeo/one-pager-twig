@@ -1,0 +1,10 @@
+<div class="o-grid" data-grid-columns="3">
+    {% for card in cards %}
+        {% include '@components/component.card.twig' with {
+            image: card.image,
+            caption1: card.caption1,
+            caption2: card.caption2,
+            text: card.text
+        } %}
+    {% endfor %}
+</div>

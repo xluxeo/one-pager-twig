@@ -1,0 +1,34 @@
+<div class="c-slider">
+    <div class="o-wrapper">
+        <div class="c-slider__wrapper">
+            <ul class="c-slider__slides">
+                {% for image in slider %}
+                    <li class="c-slider__slide">
+                        <img class="c-slider__image" id="slide-{{ image.id }}" src="{{ image.src }}" alt="Wald">
+                        <span class="c-slider__number">{{ image.id }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+            <nav class="c-slider__nav">
+                {% for slide in slider %}
+                    <div class="c-slider__nav-item">
+                        <a class="c-slider__button" href="#slide-{{ slide.id }}">
+                            <h2 class="c-slider__headline">
+                                {{ slide.headline }}
+                            </h2>
+                            <p class="c-slider__text ">
+                                {{ slide.text }}
+                            </p>
+                        </a>
+                        {% include '@components/component.button.twig' with {
+                            text: 'Explore more',
+                            modifier: 'data-button-quaternary',
+                            url: '#'
+                        } %}
+                    </div>
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+</div>
+

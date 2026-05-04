@@ -1,0 +1,40 @@
+@use "../01-tokens" as TOKENS;
+
+$media-block-spacing-xxl: TOKENS.$GLOBAL-SPACING-XXL !default;
+$media-block-inline-size: 50% !default;
+$media-block-max-inline-size: 300px !default;
+
+.c-media-block-grid {
+	display: grid;
+	gap: $media-block-spacing-xxl;
+	margin: 0 auto;
+	padding-block: $media-block-spacing-xxl;
+}
+
+.c-media-block-grid__item {
+	display: flex;
+	inline-size: 100%;
+	text-align: center;
+	align-items: center;
+
+	&:nth-child(2n) {
+		flex-direction: row-reverse;
+	}
+}
+
+.c-media-block-grid__start {
+	inline-size: $media-block-inline-size;
+}
+
+.c-media-block-grid__image {
+	max-inline-size: $media-block-max-inline-size;
+	inline-size: 100%;
+}
+
+.c-media-block-grid__end {
+	inline-size: $media-block-inline-size;
+}
+
+.c-media-block-grid__text {
+	text-align: center;
+}

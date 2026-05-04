@@ -1,0 +1,10 @@
+@use '../01-tokens' as TOKENS;
+
+$cta-gap: TOKENS.$GLOBAL-SPACING-MD !default;
+
+.c-cta {
+	display: flex;
+	flex-direction: column;
+	gap: $cta-gap;
+	inline-size: 100%;
+}

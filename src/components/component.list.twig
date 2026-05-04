@@ -1,0 +1,10 @@
+<ol class="c-list">
+    {% for item in items %}
+        <li class="c-list__item">
+            <div class="c-list__content">
+                <h3 class="c-list__title">{{ item.title }}</h3>
+                <p class="c-list__text">{{ item.text }}</p>
+            </div>
+        </li>
+    {% endfor %}
+</ol>

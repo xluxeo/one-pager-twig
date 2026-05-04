@@ -1,0 +1,42 @@
+@use '../01-tokens' as TOKENS;
+
+$footer-max-inline-size: 1200px !default;
+$footer-spacing: TOKENS.$GLOBAL-SPACING-L !default;
+$footer-font-size: TOKENS.$GLOBAL-FONT-SIZE-S !default;
+$footer-gap: TOKENS.$GLOBAL-SPACING-XL !default;
+$footer-font-weight: 400 !default;
+
+
+.c-footer__start {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	align-items: center;
+	margin: 0 auto;
+	max-inline-size: $footer-max-inline-size;
+	padding-inline: $footer-spacing;
+}
+
+.c-footer__group {
+	display: flex;
+	align-items: center;
+	gap: $footer-gap;
+	grid-column: 1 / -1;
+}
+
+.c-footer__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: $footer-font-size;
+
+	:first-child {
+		font-weight: $footer-font-weight;
+	}
+}
+
+.c-footer__end {
+	margin: 0 auto;
+	max-inline-size: $footer-max-inline-size;
+	padding-inline: $footer-spacing;
+}

@@ -1,0 +1,24 @@
+@use "../01-tokens" as TOKENS;
+
+$header-spacing: TOKENS.$GLOBAL-SPACING-MD TOKENS.$GLOBAL-SPACING-XL !default;
+$header-z-index: TOKENS.$GLOBAL-HEADER-LAYER !default;
+
+.c-header {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline: 0;
+	z-index: $header-z-index;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	justify-items: center;
+	padding: $header-spacing;
+
+	.c-button:first-child {
+		justify-self: start;
+	}
+
+	.c-button:last-child {
+		justify-self: end;
+	}
+}

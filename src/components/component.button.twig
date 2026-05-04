@@ -1,0 +1,20 @@
+{% set buttonUrl = url|default('') %}
+{% set buttonModifier = modifier|default('') %}
+{% set buttonText = text|default('') %}
+
+{% if buttonUrl %}
+    <a
+        class="c-button"
+        href="{{ buttonUrl }}"
+        {% if buttonModifier %}{{ buttonModifier }}{% endif %}
+    >
+        <span>{{ buttonText }}</span>
+    </a>
+{% else %}
+    <button
+        class="c-button"
+        {% if buttonModifier %}{{ buttonModifier }}{% endif %}
+    >
+        <span>{{ buttonText }}</span>
+    </button>
+{% endif %}

@@ -1,0 +1,11 @@
+@use '../01-tokens' as TOKENS;
+
+$marquee-font-size: TOKENS.$GLOBAL-FONT-SIZE-H2 !default;
+$marquee-font-family: TOKENS.$GLOBAL-FONT-FAMILY-HEADING !default;
+$marquee-spacing: TOKENS.$GLOBAL-SPACING-MD !default;
+
+.c-marquee {
+	margin-block-end: $marquee-spacing;
+	font-family: $marquee-font-family;
+	font-size: $marquee-font-size;
+}

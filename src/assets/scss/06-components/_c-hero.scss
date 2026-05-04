@@ -1,0 +1,43 @@
+@use "../01-tokens" as TOKENS;
+
+$hero-text-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$hero-z-index: TOKENS.$GLOBAL-BASE-LAYER !default;
+$hero-z-index-s: TOKENS.$GLOBAL-NEUTRAL-LAYER !default;
+$hero-line-height: TOKENS.$GLOBAL-LINE-HEIGHT-HEADING !default;
+$hero-max-inline-size: 850px !default;
+$hero-block-size: 150vh !default;
+
+.c-hero {
+	position: relative;
+	inline-size: 100%;
+	block-size: $hero-block-size;
+}
+
+.c-hero__image {
+	position: absolute;
+	inset: 0;
+	z-index: $hero-z-index-s;
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+}
+
+.c-hero__container {
+	position: relative;
+	z-index: $hero-z-index;
+	block-size: 100vh;
+}
+
+.c-hero__headline {
+	position: relative;
+	inset-block-start: 54%;
+	inset-inline-start: 50%;
+	translate: -50% -50%;
+	z-index: $hero-z-index;
+	margin: 0;
+	max-inline-size: $hero-max-inline-size;
+	inline-size: 100%;
+	text-align: center;
+	line-height: $hero-line-height;
+	color: $hero-text-color;
+}

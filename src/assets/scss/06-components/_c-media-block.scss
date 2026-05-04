@@ -1,0 +1,40 @@
+@use "../01-tokens" as TOKENS;
+
+$media-block-spacing: TOKENS.$GLOBAL-SPACING-XL !default;
+$media-block-gap: TOKENS.$GLOBAL-SPACING-L !default;
+$media-block-image-inline-size: 40% !default;
+$media-block-image-spacing: -50% !default;
+$media-block-headline-spacing: -45px !default;
+
+.c-media-block {
+	display: grid;
+	gap: $media-block-gap;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+.c-media-block__start {
+	position: relative;
+}
+
+.c-media-block__image-back {
+	inline-size: 100%;
+}
+
+.c-media-block__image-front {
+	position: absolute;
+	inset-block-end: $media-block-image-spacing;
+	inset-inline-start: $media-block-image-spacing;
+	transform: translate(80%, -20%);
+	inline-size: $media-block-image-inline-size;
+}
+
+.c-media-block__headline {
+	position: absolute;
+	inset-block-start: $media-block-headline-spacing;
+	inset-inline-end: $media-block-headline-spacing;
+}
+
+.c-media-block__link {
+	color: inherit;
+}

@@ -1,0 +1,18 @@
+@use "../01-tokens" as TOKENS;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY;
+	line-height: TOKENS.$GLOBAL-LINE-HEIGHT;
+	font-optical-sizing: auto;
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT;
+	font-style: normal;
+	color: TOKENS.$GLOBAL-COLOR-TEXT;
+	background-color: TOKENS.$GLOBAL-COLOR-BACKGROUND;
+}

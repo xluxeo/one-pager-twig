@@ -1,0 +1,19 @@
+<div class="c-media-block">
+    <div class="c-media-block__start">
+        <h2 class="c-media-block__headline">
+            {{ mediaBlock.headline }}
+        </h2>
+        <img class="c-media-block__image-back" src="{{ mediaBlock.imageOne }}" alt="">
+        <img class="c-media-block__image-front" src="{{ mediaBlock.imageTwo }}" alt="">
+    </div>
+    <div class="c-media-block__end">
+        <p class="c-media-block__text">
+            {{ mediaBlock.text }}
+        </p>
+        {% include '@components/component.button.twig' with {
+            url: '#',
+            text: mediaBlock.link,
+            modifier: 'data-button-tertiary'
+        } %}
+    </div>
+</div>

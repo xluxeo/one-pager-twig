@@ -1,0 +1,10 @@
+@use "../01-tokens" as TOKENS;
+
+$wrapper-spacing: TOKENS.$GLOBAL-SPACING-XXL !default;
+$wrapper-max-inline-size: 1200px !default;
+
+.o-wrapper {
+	margin: 0 auto;
+	max-inline-size: $wrapper-max-inline-size;
+	padding-inline: $wrapper-spacing;
+}

@@ -1,0 +1,56 @@
+@use "../01-tokens" as TOKENS;
+
+$headline-letter-spacing: -2px !default;
+
+h1, .h1 {
+	margin: 0;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY-HEADING;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-H1;
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT;
+	line-height: TOKENS.$GLOBAL-LINE-HEIGHT-HEADING;
+	letter-spacing: $headline-letter-spacing;
+}
+
+h2, .h2 {
+	margin: 0;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY-HEADING;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-H2;
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-HEADING;
+	line-height: TOKENS.$GLOBAL-LINE-HEIGHT-HEADING-S;
+	letter-spacing: $headline-letter-spacing;
+}
+
+h3, .h3 {
+	margin: 0;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY-HEADING;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-H3;
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-HEADING;
+	line-height: TOKENS.$GLOBAL-LINE-HEIGHT-HEADING-S;
+}
+
+h4, .h4 {
+	margin: 0;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY-HEADING;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-H4;
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-HEADING;
+	line-height: TOKENS.$GLOBAL-LINE-HEIGHT-HEADING-S;
+	letter-spacing: $headline-letter-spacing;
+}
+
+h5, .h5 {
+	margin: 0;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY-HEADING;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-H5;
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-HEADING;
+	line-height: TOKENS.$GLOBAL-LINE-HEIGHT-HEADING-S;
+	letter-spacing: $headline-letter-spacing;
+}
+
+h6, .h6 {
+	margin: 0;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY-HEADING;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-H6;
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-HEADING;
+	line-height: TOKENS.$GLOBAL-LINE-HEIGHT-HEADING-S;
+	letter-spacing: $headline-letter-spacing;
+}

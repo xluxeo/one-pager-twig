@@ -1,0 +1,25 @@
+<footer class="c-footer">
+    <div class="c-footer__start">
+        <div class="c-footer__group">
+            {% include '@components/component.logo.twig' with {
+                logo: logoDark
+            } %}
+            {% include '@components/component.button.twig' with {
+                text: "Follow my adventures on Instagram",
+                url: "#",
+                modifier: "data-button-secondary"
+            } %}
+        </div>
+        {% include '@components/component.navigation.twig' %}
+        <ul class="c-footer__list">
+            <li>Boring yet mandatory information that needs to be mentioned on my website.</li>
+            <li>Kaat DM Photography is a part of Kaat DM BV, Sint-Jansvest 27/301, B-9000 Gent</li>
+            <li>BTW BE0767.541.994, handelsregisternummer: 0767.541.994. RPR Gent, afdeling Gent</li>
+            <li>IBAN BE15 5230 8129 1230, BIC TRIONL2U.</li>
+        </ul>
+    </div>
+    <hr class="c-footer__divider">
+    <div class="c-footer__end">
+        {% include '@components/component.meta-navigation.twig' %}
+    </div>
+</footer>

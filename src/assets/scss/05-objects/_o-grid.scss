@@ -1,0 +1,13 @@
+@use '../01-tokens' as TOKENS;
+
+$grip-gap: TOKENS.$GLOBAL-SPACING-L !default;
+
+.o-grid {
+	display: grid;
+}
+
+[data-grid-columns="3"] {
+	grid-template-columns: repeat(3, 1fr);
+	gap: $grip-gap
+}
+
