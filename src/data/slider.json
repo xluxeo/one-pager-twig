@@ -4,21 +4,21 @@
       "headline": "Elopements + micro weddings",
       "text": "For couples planning an intimate, intentional adventure free from expectations. Because big weddings aren't for everyone.",
       "link": "Explore more",
-      "src": "src/assets/images/moon.jpg",
+      "src": "/images/moon.jpg",
       "id": "01"
     },
     {
       "headline": "(Destination) weddings",
       "text": "Local and destination wedding photography for couples who'd rather create and unforgettable experience than go the traditional route.",
       "link": "Explore more",
-      "src": "src/assets/images/party.png",
+      "src": "/images/party.png",
       "id": "02"
     },
     {
       "headline": "Adventure sessions",
       "text": "For the couples who’d rather hike up a mountain than pose by a white wall. For those who want a cool experience worth reliving, not just a few nice pictures. Perfect for engagement photos, an epic date night or a surprise proposal.",
       "link": "Explore more",
-      "src": "src/assets/images/mountain.jpg",
+      "src": "/images/mountain.jpg",
       "id": "03"
     }
   ]
